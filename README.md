@@ -1,4 +1,5 @@
 Student ID Card Application Form
+
 This project is a simple web-based application to create a Student ID Card with input validation and storage features. The application collects basic student details such as Name, Date of Birth, Mobile Number, and Email ID, and stores them using cookies. The data can later be retrieved by entering the mobile number.
 
 Project Overview
@@ -9,8 +10,10 @@ A form that collects and validates user input.
 Once submitted, the form stores the student's information as a cookie.
 Retrieve Student Information:
 A secondary page where users can retrieve stored student data by entering their mobile number.
+
 Features
 Form Validation:
+
 Name: Only allows alphabets and spaces. Cannot be blank.
 Date of Birth: Must be in dd/mm/yyyy format. Automatically calculates the age based on the DOB.
 Mobile Number: Must be 10 digits, cannot start with a '0'.
