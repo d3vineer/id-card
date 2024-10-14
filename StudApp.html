@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023EBCS513</title>
+    <script src="StudApp.js" defer></script>
+    <style>
+        /* Simple CSS for styling the form */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h1 {
+            text-align: center;
+            display: block; /* Keep it block for the form, it will be hidden in JS */
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: calc(100% - 16px); /* Adjusted to match button width */
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.8em;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%; /* Full width button */
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .retrieve-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .alert {
+            color: green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Student ID Card Application Form -->
+    <div class="form-container">
+        <h1 id="formTitle">Student ID Card Application Form</h1>
+        <form id="studentForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" onfocusout="validateName()" required>
+            <span id="nameError" class="error"></span>
+
+            <label for="dob">Date of Birth (dd/mm/yyyy):</label>
+            <input type="text" id="dob" name="dob" onfocusout="validateDOB()" required>
+            <span id="dobError" class="error"></span>
+
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" readonly>
+            
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile" onfocusout="validateMobile()" required>
+            <span id="mobileError" class="error"></span>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" onfocusout="validateEmail()" required>
+            <span id="emailError" class="error"></span>
+
+            <button type="button" id="submitBtn" onclick="submitForm()">Submit</button>
+            <span id="submitMessage" class="alert"></span>
+        </form>
+
+        <!-- Section for retrieving the details -->
+        <div class="retrieve-container" id="retrieveSection">
+            <h2>Retrieve Student Details</h2>
+            <label for="retrieveMobile">Mobile Number:</label>
+            <input type="text" id="retrieveMobile">
+            <button type="button" onclick="retrieveDetails()">Retrieve Cookie</button>
+            <span id="retrieveError" class="error"></span>
+        </div>
+    </div>
+
+    <!-- Student ID -->
+    <!-- Student ID: 2023EBCS513 -->
+</body>
+</html>

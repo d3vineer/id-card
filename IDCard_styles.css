@@ -1,0 +1,72 @@
+/* IDCard_styles.css */
+
+/* Reset margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background for contrast */
+}
+
+/* ID Card Styles */
+.id-card {
+    width: 300px; /* Fixed width for the card */
+    margin: 20px auto; /* Center card on the page */
+    padding: 15px; /* Add padding inside the card */
+    background-color: #fff; /* White background for the card */
+    border: 2px solid #007BFF; /* Blue border for the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Vertical layout */
+    align-items: center; /* Center items */
+}
+
+/* Photo section */
+.photo {
+    margin-bottom: 15px; /* Space below the photo */
+    padding: 5px; /* Padding inside photo section */
+}
+
+.photo img {
+    border-radius: 50%; /* Circular photo */
+    border: 2px solid #007BFF; /* Border around photo */
+    width: 100%; /* Responsive width for the image */
+    max-width: 150px; /* Limit max width of image */
+}
+
+/* Info section */
+.info {
+    text-align: left; /* Left align text */
+    border-top: 2px solid #007BFF; /* Border on top of info section */
+    padding-top: 10px; /* Space above the info section */
+    width: 100%; /* Full width for info section */
+}
+
+.name {
+    font-size: 1.5em; /* Larger font for name */
+    color: #007BFF; /* Blue color for the name */
+    margin-bottom: 10px; /* Space below name */
+}
+
+/* Individual info items */
+.info p {
+    border-bottom: 1px solid #ccc; /* Light border below each info item */
+    padding: 5px 0; /* Space around each info item */
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .id-card {
+        width: 90%; /* Full width on small screens */
+        margin: 10px; /* Reduce margin */
+    }
+
+    .name {
+        font-size: 1.2em; /* Smaller font size on mobile */
+    }
+
+    .photo img {
+        max-width: 100px; /* Limit max width on small screens */
+    }
+}
